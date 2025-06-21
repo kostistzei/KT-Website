@@ -33,4 +33,4 @@ def download_file(filename):
 if __name__ == "__main__":
     import sys
     if not hasattr(sys, 'ps1'):
-        app.run(debug=True, use_reloader=False)
+        app.run(host="0.0.0.0", port=10000)
