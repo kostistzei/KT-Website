@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Notes</title>
+    <title>University Notes</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #004080;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <h1>University Notes</h1>
+    <h1>My University Notes</h1>
     <ul>
         {% for file in notes %}
-            <li><a href="/download/{{ file }}">{{ file }}</a></li>
+            <li><a href="/download/{{ file }}">📘 {{ file }}</a></li>
         {% endfor %}
     </ul>
-    <p><a href="/">Back to Home</a></p>
+    <p><a href="/">← Back to Home</a></p>
 </body>
 </html>
