@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>University Notes</title>
+    <title>Notes – Konstantinos Tzeiranidis</title>
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #0A369D;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.05);
             padding: 40px;
-            max-width: 800px;
-            margin: auto;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 700px;
         }
 
         h1 {
-            color: #004080;
+            margin-bottom: 20px;
         }
 
         ul {
-            list-style-type: none;
-            padding-left: 0;
+            list-style: none;
+            padding: 0;
         }
 
         li {
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
 
         a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
+            color: #ffffff;
             text-decoration: underline;
         }
 
-        p {
+        a:hover {
+            color: #cce0ff;
+        }
+
+        .back-link {
             margin-top: 30px;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <h1>My University Notes</h1>
-    <ul>
-        {% for file in notes %}
-            <li><a href="/download/{{ file }}">📘 {{ file }}</a></li>
-        {% endfor %}
-    </ul>
-    <p><a href="/">← Back to Home</a></p>
+    <div class="container">
+        <h1>University Notes</h1>
+        <ul>
+            {% for note in notes %}
+                <li><a href="/download/{{ note }}">{{ note }}</a></li>
+            {% endfor %}
+        </ul>
+        <a class="back-link" href="/">← Back to Home</a>
+    </div>
 </body>
 </html>
