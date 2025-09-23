@@ -59,7 +59,7 @@
     <ul>
         {% for note in notes %}
             <li>
-                <a href="/static/{{ note }}" target="_blank" rel="noopener noreferrer">
+                <a href="{{ url_for('static', filename=note) }}" target="_blank" rel="noopener">
                     {{ note }}
                 </a>
             </li>

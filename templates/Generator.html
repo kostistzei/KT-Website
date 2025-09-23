@@ -59,13 +59,13 @@
     <ul>
       <li>
         <!-- Guide (PDF opens in new tab) -->
-        <a href="static/Generator_Guide_Greek.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="{{ url_for('static', filename=guide) }}" target="_blank" rel="noopener">📘 View/Download User Guide (PDF)</a>
           📘 View/Download User Guide (PDF)
         </a>
       </li>
       <li>
         <!-- EXE downloads directly -->
-        <a href="static/Generator.exe" download>
+        <a href="{{ url_for('download_file', filename=exe) }}">⚙️ Download the Generator (EXE)</a>
           ⚙️ Download the Generator (EXE)
         </a>
       </li>
