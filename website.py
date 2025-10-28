@@ -38,6 +38,10 @@ def notes():
 def generator():
     return render_template("Generator.html")
 
+@app.route("/beam")
+def beam_organizer():
+    return render_template("beam_organizer.html")
+
 # Optional: force download route (useful if you ever link /download/<file>)
 @app.route("/download/<path:filename>")
 def download_file(filename):
