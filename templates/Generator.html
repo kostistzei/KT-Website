@@ -59,13 +59,13 @@
     <ul>
       <li>
         <!-- Guide (PDF opens in new tab) -->
-        <a href="static/Generator_Guide_Greek.pdf" target="_blank" rel="noopener">
+        <a href="{{ url_for('static', filename='Generator_Guide_Greek.pdf') }}" target="_blank" rel="noopener">
           📘 View/Download User Guide (PDF)
         </a>
       </li>
       <li>
         <!-- EXE downloads directly -->
-        <a href="static/Generator.exe" download>
+        <a class="btn" href="https://github.com/kostistzei/KT-Website/releases/download/v1.0-generator/Generator.exe">
           ⚙️ Download the Generator (EXE)
         </a>
       </li>
