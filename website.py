@@ -42,6 +42,10 @@ def generator():
 def beam_organizer():
     return render_template("beam_organizer.html")
 
+@app.route("/beam_designer")
+def beam_section_designer():
+    return render_template("Section_Designer.html")
+
 # Optional: force download route (useful if you ever link /download/<file>)
 @app.route("/download/<path:filename>")
 def download_file(filename):
