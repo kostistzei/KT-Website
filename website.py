@@ -50,6 +50,10 @@ def beam_section_designer():
 def column_section_designer():
     return render_template("Column_Designer.html")
 
+@app.route("/wall_designer")
+def wall_section_designer():
+    return render_template("Wall_Designer.html")
+
 # Optional: force download route (useful if you ever link /download/<file>)
 @app.route("/download/<path:filename>")
 def download_file(filename):
